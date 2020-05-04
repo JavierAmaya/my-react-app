@@ -13,6 +13,7 @@ const App:React.FC = () => (
     <Switch>
       <Route path="/course/:id" exact component ={Course} />
       <Route path="/suppliers" exact component ={Suppliers} />
+      <Route path="/suppliers/:id" exact component ={Suppliers} />
     </Switch>
   </BrowserRouter>
 )
