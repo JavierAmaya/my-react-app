@@ -96,3 +96,47 @@ header{
 .hide-ele{
     display: none;
 }
+
+.var-left{
+    background-color: #110533ed;
+}
+.item-var-left{
+  color: white;
+}
+
+#body_confi{
+  background-image: url(../img/wall.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.anchor_navbar{
+  padding-right: 70%;
+}
+.items-navbar{
+  color: black;
+}
+
+.content-card{
+  text-align: center;
+}
+.item-menu{
+  width: 47%;
+}
+
+.btn-cards{
+  margin-top: 20px;
+
+}
+.my_car{
+  background-color: #00000094;
+  color: white;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.car2{
+  background-color: #00000094;
+  color: white;
+}

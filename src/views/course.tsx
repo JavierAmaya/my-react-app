@@ -3,6 +3,7 @@ import {useParams} from "react-router-dom";
 import Header,{} from "../components/header";
 import Card, {} from "../components/cards";
 
+
 import {information_service} from "../fakeservices/information";
 import {courses} from "../fakeservices/courses";
 
