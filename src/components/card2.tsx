@@ -1,5 +1,11 @@
 import React from "react";
-import proveedorImg from "../img/proveedor.png";
+import proveedorImg from "../img/global.png";
+import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
+
 
 interface ICardPropsSupplier{
     title:string
@@ -9,22 +15,20 @@ interface ICardPropsSupplier{
 
 const Card2 : React.FC<ICardPropsSupplier> = ({title,rtn,direccion})=>(
 
-    <div className="col-4 mt-2">
-        <div className="card">
-            <div className="row">
-                <div className="col-5">
-                    <img className="img-fluid" src={proveedorImg} alt="Card image cap"/>
-                </div>
-                <div className="col-7">
-                    <h5 className="card-title">{title}</h5>
+    <Col className="padding-items" md="4">
+        <Card>
+            <Row>
+                <Col md="5">
+                    <Card.Img variant="top" src={proveedorImg} />
+                </Col>
+                <Col md="7">
+                <Card.Title>{title}</Card.Title>
                     <small><p className="card-text"><strong>RTN: </strong>{rtn}</p></small>
                     <small><p className="card-text"><strong>Dirección:</strong>{direccion}</p></small>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
+                </Col>
+            </Row>
+        </Card>
+    </Col>
 );
 
 export default Card2;

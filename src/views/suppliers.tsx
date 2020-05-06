@@ -3,6 +3,13 @@ import {} from "react-router-dom";
 import Header2,{} from "../components/header2";
 import {getSuppliers} from "../services/supplier"
 import Card2 from "../components/card2";
+import CardDeck from 'react-bootstrap/CardDeck';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
+
+
 
 const Suppliers:React.FC = () =>{
 
@@ -22,7 +29,7 @@ const Suppliers:React.FC = () =>{
 
     useEffect(()=>{
         if(update){
-            getSuppliers().then( r=>{                
+            getSuppliers().then( r =>{                
                 setUpdate(false);
                 setSupplier(r.data);
             });
@@ -35,17 +42,19 @@ const Suppliers:React.FC = () =>{
     }, []);
 
     return (
-       <div>
+       <div className="backgroundImg">
            <Header2/>
-           <div>
-              {suppliers.map((sup: IDataSupplier, index)=>(
-                <Card2
-                    title = {sup.SupplierName}
-                    rtn = {sup.Phone}
-                    direccion = {sup.Address}
-                />
-              ))} 
-           </div>
+           <Container>
+               <Row>
+                    {suppliers.map((sup: IDataSupplier, index)=>(
+                         <Card2
+                         title = {sup.SupplierName}
+                         rtn = {sup.Phone}
+                         direccion = {sup.Address}
+                         />
+                    ))}  
+               </Row>
+           </Container>
        </div>
     )
 }

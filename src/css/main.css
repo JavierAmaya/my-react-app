@@ -104,7 +104,7 @@ header{
   color: white;
 }
 
-#body_confi{
+.backgroundImg{
   background-image: url(../img/wall.jpg);
   background-repeat: no-repeat;
   background-position: center center;
@@ -140,3 +140,14 @@ header{
   background-color: #00000094;
   color: white;
 }
+
+.navbar{
+    background-color: #110533!important;
+    color: white;
+
+}
+
+.padding-items{
+    padding-top: 10px;
+}
+
